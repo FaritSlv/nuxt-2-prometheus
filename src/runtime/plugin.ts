@@ -7,8 +7,21 @@ import type { AnalyticsModuleParams } from '../type'
 export default (context: Context) => {
   // eslint-disable-next-line @typescript-eslint/quotes
   const options: AnalyticsModuleParams = JSON.parse(`<%= JSON.stringify(options) %>`)
-  const path = context.route?.matched?.[0]?.path === '' ? '/' : context.route?.matched?.[0]?.path
-  const name = context.route?.matched?.[0]?.name
+  let path, name
+
+  if (options.disableRouter) {
+    path = context.route?.path
+    name = path === '/' ? 'main' : path.replace(/\//gm, '_')
+    if (name[0] === '_')
+      name = name.slice(1)
+    if (name[name.length - 1] === '_')
+      name = name.slice(0, -1)
+  }
+  else {
+    path = context.route?.matched?.[0]?.path === '' ? '/' : context.route?.matched?.[0]?.path
+    name = context.route?.matched?.[0]?.name
+  }
+
   const interceptor = new BatchInterceptor({
     name: 'nuxt-analytics',
     interceptors: nodeInterceptors,

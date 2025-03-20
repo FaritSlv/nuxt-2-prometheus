@@ -10,6 +10,7 @@ const module: Module<AnalyticsModuleParams> = function (moduleOptions) {
   const option = merge(
     {
       verbose: true,
+      disableRouter: false,
     },
     this.options.analytics,
     moduleOptions,

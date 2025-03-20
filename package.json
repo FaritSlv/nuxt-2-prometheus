@@ -1,7 +1,7 @@
 {
-  "name": "@artmizu/analytics-nuxt-2",
+  "name": "@faritslv/analytics-nuxt-2",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "packageManager": "pnpm@7.16.1",
   "author": "Aleksandr Saburov <hello@artmizu.ru> (http://artmizu.ru/)",
   "publishConfig": {
