@@ -20,4 +20,10 @@ export interface AnalyticsModuleParams {
    * @default true
    */
   verbose: boolean
+
+  /**
+   * disable use nuxt-router
+   * @default false
+   */
+  disableRouter: boolean
 }
