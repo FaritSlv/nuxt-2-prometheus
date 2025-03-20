@@ -1,4 +1,9 @@
 # Changelog
+## [1.2.1](https://github.com/artmizu/analytics-nuxt-2/compare/v1.2.0...v1.2.1) (2025-03-20)
+
+## [1.2.0](https://github.com/artmizu/analytics-nuxt-2/compare/v1.0.1...v1.2.0) (2025-03-20)
+### Add options
+* add new options "disableRouter"
 
 ## [1.0.1](https://github.com/artmizu/analytics-nuxt-2/compare/v1.0.0...v1.0.1) (2022-11-28)
 
